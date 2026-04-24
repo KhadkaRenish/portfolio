@@ -2,16 +2,16 @@ function Hero() {
   return (
     <section
       id="home"
-      style={{
-        minHeight: "90vh",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        background: "#0f172a",
-        color: "white",
-        textAlign: "center",
-        padding: "2rem"
-      }}
+      // style={{
+      //   minHeight: "90vh",
+      //   display: "flex",
+      //   alignItems: "center",
+      //   justifyContent: "center",
+      //   background: "#0f172a",
+      //   color: "white",
+      //   textAlign: "center",
+      //   padding: "2rem"
+      // }}
     >
       <div>
         <h1 style={{ fontSize: "3rem", marginBottom: "1rem" }}>Hi, I’m Renish</h1>

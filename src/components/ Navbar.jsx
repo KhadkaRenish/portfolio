@@ -1,28 +1,45 @@
+const navItems = [
+  { label: "Home", href: "#home" },
+  { label: "About", href: "#about" },
+  { label: "Projects", href: "#projects" },
+  { label: "Contact", href: "#contact" },
+];
+
 function Navbar() {
   return (
-    <nav style={{
-      display: "flex",
-      justifyContent: "space-between",
-      alignItems: "center",
-      padding: "20px 40px",
-      backgroundColor: "#0f172a",
-      color: "white"
-    }}>
-      <h2>Renish</h2>
+    <header className="site-header">
+      <nav className="navbar">
+        <a className="navbar__brand" href="#home" aria-label="Go to homepage">
+          <span className="navbar__brand-mark" aria-hidden="true">
+            <span />
+            <span />
+            <span />
+          </span>
 
-      <ul style={{
-        display: "flex",
-        gap: "20px",
-        listStyle: "none",
-        margin: 0,
-        padding: 0
-      }}>
-        <li><a href="#home" style={{ color: "white", textDecoration: "none" }}>Home</a></li>
-        <li><a href="#about" style={{ color: "white", textDecoration: "none" }}>About</a></li>
-        <li><a href="#projects" style={{ color: "white", textDecoration: "none" }}>Projects</a></li>
-        <li><a href="#contact" style={{ color: "white", textDecoration: "none" }}>Contact</a></li>
-      </ul>
-    </nav>
+          <span className="navbar__brand-copy">
+            <strong>Renish</strong>
+            <small>Let's go</small>
+          </span>
+        </a>
+
+        <div className="navbar__meta" aria-label="Current professional focus">
+          <span className="navbar__status-dot" aria-hidden="true" />
+          Infrastructure Ready
+        </div>
+
+        <ul className="navbar__links">
+          {navItems.map((item) => (
+            <li key={item.href}>
+              <a href={item.href}>{item.label}</a>
+            </li>
+          ))}
+        </ul>
+
+        <a className="navbar__cta" href="#contact">
+          Book a Call
+        </a>
+      </nav>
+    </header>
   );
 }
 
